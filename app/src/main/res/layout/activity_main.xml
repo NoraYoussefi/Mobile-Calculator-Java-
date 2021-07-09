@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screen">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+<!--___________________________ bouton 1/x ____________________________________________-->
+            <Button
+                android:id="@+id/btnInverse"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#A5F2FB"
+                android:onClick="operation"
+                android:text="1/x"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#DEA0ACAC" />
+
+<!--___________________________ bouton sinus ____________________________________________-->
+            <Button
+                android:id="@+id/btnSin"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#A5F2FB"
+                android:onClick="operation"
+                android:text="sin"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#71D3DF" />
+
+<!--___________________________ bouton cosinus____________________________________________-->
+            <Button
+                android:id="@+id/btnCos"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#A5F2FB"
+                android:onClick="operation"
+                android:text="cos"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#71D3DF" />
+
+<!--___________________________ bouton tangent ____________________________________________-->
+            <Button
+                android:id="@+id/btnTan"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#A5F2FB"
+                android:onClick="operation"
+                android:text="tan"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#71D3DF" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+<!--___________________________ bouton 7____________________________________________-->
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#E4FBF7FA"
+                android:onClick="numero"
+                android:tag="7"
+                android:text="7"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#197783" />
+
+<!--___________________________ bouton 8 ____________________________________________-->
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#E4FBF7FA"
+                android:onClick="numero"
+                android:tag="8"
+                android:text="8"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#197783" />
+
+ <!--___________________________ bouton 9 ____________________________________________-->
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#E4FBF7FA"
+                android:onClick="numero"
+                android:tag="9"
+                android:text="9"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#197783" />
+
+            <Button
+                android:id="@+id/btnAc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#CDD80E0E"
+                android:onClick="clear"
+                android:text="CE"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#8E821E" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+<!--___________________________ bouton 4 ____________________________________________-->
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@color/black"
+                android:onClick="numero"
+                android:tag="4"
+                android:text="4"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#197783" />
+
+<!--___________________________ bouton 5 ____________________________________________-->
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#E4FBF7FA"
+                android:onClick="numero"
+                android:tag="5"
+                android:text="5"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#197783" />
+
+<!--___________________________ bouton 6 ____________________________________________-->
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#E4FBF7FA"
+                android:onClick="numero"
+                android:tag="6"
+                android:text="6"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#197783" />
+
+ <!--___________________________ bouton Division ___________________________________________-->
+            <Button
+                android:id="@+id/btnDiv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#FAF6B0C9"
+                android:onClick="operation"
+                android:text="/"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="#0A5049" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+<!--___________________________ bouton 1 ____________________________________________-->
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#E4FB3333"
+                android:onClick="numero"
+                android:tag="1"
+                android:text="1"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#197783" />
+
+<!--___________________________ bouton 2 ____________________________________________-->
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#E4FBF7FA"
+                android:onClick="numero"
+                android:tag="2"
+                android:text="2"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#197783" />
+
+<!--___________________________ bouton 3____________________________________________-->
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#E4FBF7FA"
+                android:onClick="numero"
+                android:tag="3"
+                android:text="3"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#197783" />
+
+<!--___________________________ bouton 4 ____________________________________________-->
+            <Button
+                android:id="@+id/btnFois"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#FAF6B0C9"
+                android:onClick="operation"
+                android:tag="4"
+                android:text="x"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="#0A5049" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+ <!--___________________________ bouton 0 ____________________________________________-->
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#E4FBF7FA"
+                android:onClick="numero"
+                android:tag="0"
+                android:text="0"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                app:backgroundTint="#0A5049" />
+
+<!--___________________________ bouton egale ____________________________________________-->
+            <Button
+                android:id="@+id/btnEqual"
+
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#E6E1FAF9"
+                android:onClick="equal"
+                android:text="="
+                android:textColor="#080809"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="#8E821E" />
+
+ <!--___________________________ bouton  plus ____________________________________________-->
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#FAF6B0C9"
+                android:onClick="operation"
+                android:text="+"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="#0A5049" />
+
+<!--___________________________ bouton moins ____________________________________________-->
+            <Button
+                android:id="@+id/btnMoins"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="#2196F3"
+                android:onClick="operation"
+                android:text="-"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:backgroundTint="#0A5049" />
+        </LinearLayout>
+    </LinearLayout>
+
+<!--___________________________ Espace du resultat ____________________________________________-->
+    <EditText
+        android:id="@+id/screen"
+        android:layout_width="385dp"
+        android:layout_height="60dp"
+        android:background="#C0DDD9"
+        android:ems="10"
+        android:gravity="end"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textColor="@android:color/black"
+        android:textSize="39sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
